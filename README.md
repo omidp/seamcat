@@ -11,6 +11,8 @@ JBoss Seam on Tomcat
 
 * Add postgresql jar file to tomcat lib folder
 
+* Don't forget to create database testdb and role test for postgresql
+
 ## Run
 
 after running tomcat, open browser 
