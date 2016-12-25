@@ -1,0 +1,7 @@
+<Context path="/seamcat" docBase="seamcat"
+        debug="5" reloadable="true" crossContext="true">
+
+  <ResourceLink global="jdbc/TestDB" name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+             />
+ 
+</Context>
