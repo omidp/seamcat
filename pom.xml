@@ -22,27 +22,43 @@
 		<!-- General properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.compiler.version>1.7</java.compiler.version>
-		<java.version>1.7</java.version>
+		<java.compiler.version>1.8</java.compiler.version>
+		<java.version>1.8</java.version>
 		<!-- Log -->
 		<slf4j.version>1.5.8</slf4j.version>
 		<!-- UI -->
 		<ui.components.version>2.2</ui.components.version>
 		<richfaces.version>3.3.1.GA</richfaces.version>
-		<jsf.version>1.2_12</jsf.version>
+		<jsf.version>2.1.7</jsf.version>
 		<facelets.version>1.1.15</facelets.version>
 		<!-- Persistence -->
 		<javax.persistence.version>1.0</javax.persistence.version>
 		<!-- Hibernate -->
-		<hibernate.version>3.6.10.Final</hibernate.version>
-		<hibernate.envers.version>3.6.0.Final</hibernate.envers.version>
-		<hibernate-em.version>3.6.10.Final</hibernate-em.version>
+		<hibernate.version>5.0.10.Final</hibernate.version>
+		<!-- <hibernate.envers.version>3.6.0.Final</hibernate.envers.version> -->
+		<hibernate-em.version>5.0.10.Final</hibernate-em.version>
 		<version.drools>5.0.1</version.drools>
-		<seam.version>2.2.3</seam.version>
+		<seam.version>2.3.2-1-wildfly_10_1_0_Final-SNAPSHOT</seam.version>
 		<postgres.version>9.1-901.jdbc4</postgres.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.jbpm.jbpm3</groupId>
+			<artifactId>jbpm-jpdl</artifactId>
+			<version>3.2.10-1-SP3_seam2_hibernate5-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.0</version>
+		</dependency>
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -56,6 +72,10 @@
 				<exclusion>
 					<groupId>jboss</groupId>
 					<artifactId>javassist</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>testng</artifactId>
+					<groupId>org.testng</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -98,11 +118,8 @@
 		</dependency>
 		<!-- Hibernate -->
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-envers</artifactId>
-			<version>${hibernate.envers.version}</version>
-		</dependency>
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-envers</artifactId> 
+			<version>${hibernate.envers.version}</version> </dependency> -->
 
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -125,6 +142,21 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/bsh/bsh -->
+		<dependency>
+			<groupId>bsh</groupId>
+			<artifactId>bsh</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+
 		</dependency>
 		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
 			<version>${hibernate.version}</version> <exclusions> <exclusion> <groupId>commons-collections</groupId> 
@@ -169,6 +201,10 @@
 					<groupId>commons-collections</groupId>
 					<artifactId>commons-collections</artifactId>
 				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 
@@ -207,7 +243,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.faces</groupId>
+			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
 			<version>${jsf.version}</version>
 			<exclusions>
@@ -227,16 +263,12 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.faces</groupId>
+			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
 			<version>${jsf.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.sun.facelets</groupId>
-			<artifactId>jsf-facelets</artifactId>
-			<version>${facelets.version}</version>
-		</dependency>
-
+		<!-- <dependency> <groupId>com.sun.facelets</groupId> <artifactId>jsf-facelets</artifactId> 
+			<version>${facelets.version}</version> </dependency> -->
 		<dependency>
 			<groupId>javax.persistence</groupId>
 			<artifactId>persistence-api</artifactId>

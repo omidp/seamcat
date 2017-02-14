@@ -7,7 +7,7 @@
 
     <property name="show_sql">true</property>
     <property name="connection.datasource">java:comp/env/jdbc/JbpmDB</property>
-    <property name="transaction.factory_class">org.hibernate.transaction.JTATransactionFactory</property>
+    <!-- <property name="transaction.factory_class">org.hibernate.transaction.JTATransactionFactory</property> -->
     <!--<property name="transaction.manager_lookup_class">org.hibernate.transaction.JBossTransactionManagerLookup</property>-->
     <!-- <property name="transaction.manager_lookup_class">org.jboss.as.jpa.hibernate3.JBossAppServerJtaPlatform</property> --> 
     <!--<property name="cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>-->
@@ -163,6 +163,9 @@
     <mapping resource="org/jbpm/taskmgmt/log/SwimlaneLog.hbm.xml"/>
     <mapping resource="org/jbpm/taskmgmt/log/SwimlaneCreateLog.hbm.xml"/>
     <mapping resource="org/jbpm/taskmgmt/log/SwimlaneAssignLog.hbm.xml"/>
+    
+    
+    <mapping resource="org/jbpm/db/hibernate.types.postgresql.hbm.xml"/>
     
   </session-factory>
 </hibernate-configuration>
