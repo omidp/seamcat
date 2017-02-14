@@ -26,6 +26,16 @@
 			</p:panel>
 			<p:commandButton action="#{customerHome.persist()}" value="Persist" update=":growl"/>
 		</h:form>
+		
+		
+		<h:form>
+			<p:dataTable value="#{customerQuery.resultList}" var="_item">
+				<p:column headerText="Customer Age">
+					<p:outputLabel value="#{_item.age}"></p:outputLabel>
+				</p:column>
+			</p:dataTable>
+		</h:form>
+		
 	</h:body>
 	</html>
 </ui:composition>

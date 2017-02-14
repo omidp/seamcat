@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "customer")
@@ -15,8 +16,19 @@ public class Customer implements Serializable
 
     private Long id;
     private String name;
+    private int age;
+    
+    
+    @Transient
+    public int getAge() {
+		return age;
+	}
 
-    @Id
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Id
     @GeneratedValue
     @Column(name="id")
     public Long getId()
