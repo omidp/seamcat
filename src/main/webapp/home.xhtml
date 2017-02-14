@@ -5,20 +5,27 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:p="http://primefaces.org/ui"  
 	xmlns:c="http://java.sun.com/jstl/core">
 	<html>
-	<head>
+	<h:head>
 	
 	<title><h:outputText value="#{message['title']}" /></title>
 	<c:set var="_ctx" value="#{request.contextPath}" />	
 	
-	</head>
-	<body>
+	</h:head>
+	<h:body>
 		Welcome To Tomcat Seam
+		<p:growl id="growl"></p:growl>
 		<h:form>
-			<h:inputText value="#{customerHome.instance.name}" />
-			<h:commandButton action="#{customerHome.persist()}" value="Persist" />
+			<p:panel header="Customer">
+				<s:decorate template="/edit.xhtml">
+					<ui:define name="label"><p:outputLabel value="Customer Name"></p:outputLabel></ui:define>
+					<p:inputText value="#{customerHome.instance.name}" />
+				</s:decorate>
+			</p:panel>
+			<p:commandButton action="#{customerHome.persist()}" value="Persist" update=":growl"/>
 		</h:form>
-	</body>
+	</h:body>
 	</html>
 </ui:composition>

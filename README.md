@@ -1,5 +1,5 @@
 # seamcat
-JBoss Seam on Tomcat
+JBoss Seam 2.3.1Final on Tomcat
 
 ## Configuration
 
