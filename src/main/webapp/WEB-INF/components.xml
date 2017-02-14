@@ -35,10 +35,5 @@
                     
     <security:identity authenticate-method="#{authenticator.authenticate}"/>  
     
-    <bpm:jbpm>
-    	<bpm:process-definitions>
-    		<value>managerProcess.jpdl.xml</value>
-    	</bpm:process-definitions>
-    </bpm:jbpm>
     
 </components>

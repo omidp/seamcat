@@ -43,17 +43,7 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.jbpm.jbpm3</groupId>
-			<artifactId>jbpm-jpdl</artifactId>
-			<version>3.2.10-1-SP3_seam2_hibernate5-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
@@ -144,12 +134,7 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/bsh/bsh -->
-		<dependency>
-			<groupId>bsh</groupId>
-			<artifactId>bsh</artifactId>
-			<version>1.3.0</version>
-		</dependency>
+	
 
 
 		<dependency>

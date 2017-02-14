@@ -24,21 +24,18 @@
 					<p:inputText value="#{customerHome.instance.name}" />
 				</s:decorate>
 			</p:panel>
-			<p:commandButton action="#{customerHome.persist()}" value="Persist" update=":growl"/>
+			<p:commandButton action="#{customerHome.persist()}" value="Persist" update=":growl :tblFrm:tbl"/>
 		</h:form>
 		
 		
-		<h:form>
-			<p:dataTable value="#{customerQuery.resultList}" var="_item">
+		<h:form id="tblFrm">
+			<p:dataTable value="#{customerQuery.resultList}" var="_item" id="tbl">
 				<p:column headerText="Customer Age">
 					<p:outputLabel value="#{_item.age}"></p:outputLabel>
 				</p:column>
 			</p:dataTable>
 		</h:form>
 		
-		<h:form>
-			<h:commandButton action="#{customerHome.register()}" value="Run Process" />
-		</h:form>
 		
 	</h:body>
 	</html>
