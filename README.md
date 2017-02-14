@@ -1,5 +1,5 @@
 # seamcat
-JBoss Seam 2.3.1Final on Tomcat
+JBoss Seam 2.3.1Final on Tomcat 7.57, Hibernate 4.2
 
 ## Configuration
 
