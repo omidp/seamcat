@@ -3,5 +3,8 @@
 
   <ResourceLink global="jdbc/TestDB" name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
              />
+             
+     <ResourceLink global="jdbc/JbpmDB" name="jdbc/JbpmDB" auth="Container" type="javax.sql.DataSource"
+             />          
  
 </Context>
