@@ -20,13 +20,6 @@ public class CustomerQuery extends EntityQuery<Customer> {
 	}
 	
 	
-	@Override
-	public List<Customer> getResultList() {
-		 List<Customer> customers = super.getResultList();
-		 customers.forEach((item)->item.setAge(20));
-		 return customers;
-	}
-	
 	
 	
 	

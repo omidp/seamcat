@@ -34,11 +34,11 @@
 		<!-- Persistence -->
 		<javax.persistence.version>1.0</javax.persistence.version>
 		<!-- Hibernate -->
-		<hibernate.version>5.0.10.Final</hibernate.version>
+		<hibernate.version>4.2.0.Final</hibernate.version>
 		<!-- <hibernate.envers.version>3.6.0.Final</hibernate.envers.version> -->
-		<hibernate-em.version>5.0.10.Final</hibernate-em.version>
+		<hibernate-em.version>4.2.0.Final</hibernate-em.version>
 		<version.drools>5.0.1</version.drools>
-		<seam.version>2.3.2-1-wildfly_10_1_0_Final-SNAPSHOT</seam.version>
+		<seam.version>2.3.1.Final</seam.version>
 		<postgres.version>9.1-901.jdbc4</postgres.version>
 	</properties>
 
