@@ -22,14 +22,6 @@ JBoss Seam 2 migrated to Wildfly 10.1.x (Branch - seam_2_3-wildfly_10_1_0_Final)
 	url="jdbc:postgresql://127.0.0.1:5432/testdb" username="test"/>
 ```
 
-* for using jbpm also add this
-
-```
-<Resource auth="Container" driverClassName="org.postgresql.Driver" global="jdbc/JbpmDB" 
-    maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/JbpmDB" password="jbpm" 
-    type="javax.sql.DataSource" 
-    url="jdbc:postgresql://127.0.0.1:5432/jbpmdb" username="jbpm"/>
-```
 
 * Add postgresql jar file to tomcat lib folder
 
